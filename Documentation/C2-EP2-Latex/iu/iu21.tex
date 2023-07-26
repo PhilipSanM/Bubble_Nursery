@@ -1,0 +1,34 @@
+%--------------------------------------
+\section{IU21 Registrar evento escolar}
+
+\subsection{Objetivo}
+	Permite al {\bf director} registrar un evento escolar
+
+\subsection{Diseño}
+	Esta pantalla \IUref{IU21}{Registrar evento escolar} (ver figura~\ref{IU21}) aparece una vez que el usuario ha ingresado al sistema y ha seleccionado agregar evento escolar,
+ en la parte superior aparecen tres opciones de que acciones puede realizar el actor las cuales son {\bf Regresar} y en la parte de la pantalla un formulario con los datos para ingresar un nuevo evento escolar y la opcion de {\bf Guardar} o {\bf Eliminar} del calendario. 
+
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regeventoescolar}{IU21}{Registrar evento escolar.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+fecha del evento, nombre del evento, hora de inicio y fin del evento.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Regresar}: regresa a la \IUref{UI7}{Pantalla del director}.
+	\item \IUbutton{Guardar}: Guarda el evento creado.
+           \item \IUbutton{Elimnar}: Elimina el evento seleccionado.
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Error al verificar los datos de acceso, vuelva a intentarlo.
+\end{Citemize}
+

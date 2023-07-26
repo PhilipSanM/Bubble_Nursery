@@ -1,0 +1,74 @@
+
+\documentclass[10pt]{book}
+
+\usepackage{cdtUsecases}
+\usepackage{txfonts}
+\title{Sistema de Administración de la Guardería Burbujas}
+%\subtitle{Componente 2 Iteración 2 Especificación del proyecto}
+\author{Diego Rosas Cruz, Jose Angel Robles Otero, Felipe Sanchez Martinez}
+\organization{Escuela Superior de Cómputo, IPN}
+\showInstrucciones
+\date{\color{red}Entregable 3 de julio de 2023}
+%\date{\color{green}Version 1.0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\ThisLRCornerWallPaper{1}{theme/bannerAzul}
+\maketitle
+\thispagestyle{empty}
+
+
+\frontmatter
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\include{projectCharter}
+
+\mainmatter
+\LRCornerWallPaper{1}{theme/plecaAyD}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Análisis}
+%=========================================================
+\include{parteI/1Introduccion}
+
+% ==========================================================
+\include{parteI/2ModelodeAlcance}
+
+%=========================================================
+\include{parteI/3ModelolNegocio}
+
+%=========================================================
+\include{parteI/4ModeloDinamico}
+
+%=========================================================
+\include{parteI/5ModeloInteraccion}
+
+%=========================================================
+\include{5ModelodeManejoInfo}
+
+%=========================================================
+% ========================================================
+%==========================================================
+\part{Diseño}
+
+%=========================================================
+\include{parteII/1Introduccion}
+
+%=========================================================
+\include{parteII/2DisenoArquitec}
+
+%=========================================================
+\include{parteII/3ModeloEstatico}
+
+%=========================================================
+\include{parteII/4ModeloDinamico}
+
+%=========================================================
+\include{parteII/5ModelodeManejoInfo}
+
+
+\end{document}

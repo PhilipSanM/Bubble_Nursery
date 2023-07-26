@@ -1,0 +1,105 @@
+%=========================================================
+\chapter{Introducción}
+
+	Este documento contiene la Especificacion del análisis sobre el proyecto ``{\em "Guarderıa Burbujas”}'' correspondiente al trabajo realizado en el 2023/1 para la materia de Análisis y diseño de sistemas en el grupo 4BM1 por el equipo {\em Los bubulusuaves}.
+
+%---------------------------------------------------------
+\section{Presentación}
+Este documento contiene la especificación de los requerimientos del usuario y del sistema del proyecto en desarrollo. Tiene como objetivo establecer una base clara y precisa de los elementos necesarios para el diseño y desarrollo del sistema.
+
+\begin{itemize}
+    \item Los requerimientos del usuario, se busca comprender y documentar las necesidades, expectativas y funcionalidades deseadas por los usuarios finales. Esto implica identificar las características y comportamientos que el sistema debe tener para satisfacer dichas necesidades.
+
+    \item Los requerimientos del sistema se enfocan en definir las características técnicas, funcionales y de rendimiento que el sistema debe cumplir. Esto incluye aspectos como la arquitectura, las interfaces, la seguridad, la usabilidad y cualquier otra especificación relevante para el sistema.
+\end{itemize}
+
+Al establecer estos requerimientos, se busca asegurar la calidad del sistema, su alineación con los objetivos del proyecto y la satisfacción de los usuarios finales. Además, estos requerimientos servirán como referencia durante todo el ciclo de vida del proyecto, facilitando la toma de decisiones y el seguimiento del progreso.
+
+En resumen, el objetivo de este documento es proporcionar una especificación clara y completa de los requerimientos del usuario y del sistema para el proyecto en desarrollo. Esto garantiza una comprensión compartida entre todas las partes involucradas y sienta las bases para el diseño y desarrollo exitoso del sistema.
+ 
+	
+%---------------------------------------------------------
+\section{Nomenclatura.}
+
+	Los requerimientos funcionales utilizan una clave RFX, donde:
+	
+\begin{description}
+	\item[X] Es un número consecutivo: 1, 2, 3, ...
+	\item[RF] Es la clave para todos los {\bf R}equerimientos {\bf F}uncionales.
+\end{description}
+
+	Los requerimientos del usuario utilizan una clave RUX, donde:
+	
+\begin{description}
+	\item[X] Es un número consecutivo: 1, 2, 3, ...
+	\item[RU] Es la clave para todos los {\bf R}equerimientos del {\bf U}suario.
+\end{description}
+
+Los requerimientos no funcionales utilizan una clave RNFX, donde:
+	
+\begin{description}
+	\item[X] Es un número consecutivo: 1, 2, 3, ...
+	\item[RNF] Es la clave para todos los {\bf R}equerimientos {\bf N}o {\bf F}uncionales.
+\end{description}
+
+	Además, para los requerimientos funcionales y no funcionales se usan las abreviaciones que se muestran en la tabla~\ref{tbl:leyendaRF}.
+\begin{table}[hbtp!]
+	\begin{center}
+    \begin{tabular}{|r l|}
+	    \hline
+    	{\footnotesize Id} & {\footnotesize\em Identificador del requerimiento.}\\
+    	{\footnotesize Prioridad} & {\footnotesize\em Prioridad}\\
+    	{\footnotesize Id RU} & {\footnotesize\em Referencia a los Requerimientos de usuario.}\\
+    	{\footnotesize Alta} & {\footnotesize\em Prioridad Alta.}\\
+    	{\footnotesize Moderada} & {\footnotesize\em Prioridad Media.}\\
+    	{\footnotesize Baja} & {\footnotesize\em Prioridad Baja.}\\
+		\hline
+    \end{tabular} 
+    \caption{Leyenda para los requerimientos funcionales.}
+    \label{tbl:leyendaRF}
+	\end{center}
+\end{table}
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+\subsection{ Modelado de Interfaces.}
+Se dedica a definir y representar las interfaces del sistema, tanto las interfaces de usuario como las interfaces entre componentes internos. Este modelado se realiza mediante diagramas de interfaces, que muestran los elementos visuales, los controles y las interacciones que los usuarios tendrán con el sistema. Además, se pueden utilizar diagramas de comunicación y otros artefactos para detallar las interacciones entre el sistema y los actores externos.\\
+\\
+
+
+\textbf{Objetivo}
+	En esta sección se describe el objetivo de la funcionalidad o pantalla que se está documentando.\\
+
+\textbf{Diseño}
+	En esta sección se describe el objetivo de la funcionalidad o pantalla que se está documentando.\\
+ 
+\textbf{Salidas}
+
+	En esta sección se describe el objetivo de la funcionalidad o pantalla que se está documentando.
+\textbf{Entradas}
+En esta sección se describe el objetivo de la funcionalidad o pantalla que se está documentando.\\
+\textbf{Comandos}
+En esta sección se describe el objetivo de la funcionalidad o pantalla que se está documentando.
+\\
+\textbf{Mensajes}
+En esta sección se describe el objetivo de la funcionalidad o pantalla que se está documentando.
+
+
+%---------------------------------------------------------
+\subsection{ Modelado de Mensajes.}
+
+Se concentra en la definición y representación de los mensajes que se intercambian entre los componentes del sistema. Estos mensajes pueden ser eventos, comandos, consultas u otra forma de comunicación que ocurra durante la ejecución del sistema. El modelado de mensajes ayuda a comprender las interacciones y la sincronización entre los componentes, y se puede realizar mediante diagramas de secuencia, diagramas de colaboración y otros artefactos que representen las comunicaciones entre los elementos del sistema.
+
+\textbf{Un mensaje se conformará de:}
+
+\begin{description}
+    \item[Id] Identificador del mensaje, el cual debe ser único y tendrá la siguiente nomenclatura: \\
+    MSGX: donde $x$ es el número del mensaje.
+    
+    \item[Nombre] Nombre del mensaje, el cual es descriptivo basándose en la acción que se realiza.
+    
+    
+\end{description}
+
+
+% -----------------------------

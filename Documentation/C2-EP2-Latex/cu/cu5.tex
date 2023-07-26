@@ -1,0 +1,61 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU5}{Registrar sala}{
+		Capital humano llenara los datos de una sala para registrarla en el sistema.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{capitalHumano}{Capital humano}}
+		\UCitem{Propósito}{Se necesita tener registradas las salas existentes y su capacidad para saber cuantos menores más se pueden aceptar.}
+		\UCitem{Entradas}{IdSala, capacidad.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{La Sala no debe estar registrada.}
+		\UCitem{Postcondiciones}{Habrá una sala más registrada en el sistema.}
+		\UCitem{Errores}{
+            \begin{itemize}
+                \item Si la sala que intenta registrar ya existe el sistema mostrara el mensaje de error y solicitara otra vez los datos.
+                \item No se llenaron los datos correctamente; el sistema mostrara en que campos se tiene error y solicitara su corrección.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IU5}{Pantalla principal Capital humano}.
+		\UCpaso[\UCactor] solicita registrar una sala.
+		\UCpaso muestra la \IUref{IU12}{Registrar sala}.
+		\UCpaso[\UCactor] llena todos los datos solicitados para registrar una sala.
+		\UCpaso verifica que no exista esa sala\Trayref{A}.
+		\UCpaso Verifica que todos los datos esten llenados correctamente \Trayref{B}.
+		\UCpaso registra la nueva sala y muestra al actor el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{La sala ya existe}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Esa sala ya existe, favor de comprobar los datos de la sala a registrar.''.
+			\UCpaso Continua en el paso 7 del caso de uso.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Algun dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

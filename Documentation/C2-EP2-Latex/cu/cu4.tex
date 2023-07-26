@@ -1,0 +1,55 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU4}{Enlazar padre hijo}{
+		Capital humano enlazará cada niño con su padre o tutor.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Diego Rosas Cruz}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{capitalHumano}{Capital humano}}
+		\UCitem{Propósito}{Es necesario enlazar cada niño con su padre o tutor para saber a quién enviar avisos o llamar en caso de alguna incidencia con el niño.}
+		\UCitem{Entradas}{IdNiño, IdPadre}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{El niño y el padre que serán enlazados tienen que estar registrados en la guardería.
+  El niño no debe estar enlazado con más de dos tutores.
+  El padre o tutor puede o no estar enlazado con otros niños.}
+		\UCitem{Postcondiciones}{Un niño y un padre o tutor estarán enlazados en el sistema.}
+		\UCitem{Errores}{
+            \begin{itemize}
+                \item El niño que se intenta enlazar ya está enlazado con dos tutores. El sistema mostrará un mensaje de error al enlazar.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IU5}{Pantalla principal Capital humano}.
+		\UCpaso[\UCactor] solicita enlazar un niño con un tutor,.
+		\UCpaso muestra la \IUref{IUX}{Enlazar niño padre}.
+		\UCpaso[\UCactor] Selecciona un padre
+        \UCpaso[\UCactor] Selecciona un niño
+		\UCpaso verifica que ese niño no esté enlazado con dos tutores.\Trayref{A}.
+		\UCpaso enlaza al niño con el padre o tutor y muestra al actor el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+ %--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El niño ya está enlazado con dos tutores.}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Ese niño ya está enlazados con dos tutores, por favor escoja otro niño''.
+			\UCpaso Continua en el paso 7 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

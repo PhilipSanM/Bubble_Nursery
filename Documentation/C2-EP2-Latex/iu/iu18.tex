@@ -1,0 +1,41 @@
+%--------------------------------------
+\newpage
+\section{IU18 Registrar tareas}
+
+\subsection{Objetivo}
+	Permite al {\bf profesor} registrar las tareas que deben hacer los infantes en sus casas, para que los padres de familia esten enterados de estas.
+
+\subsection{Diseño}
+	 Esta pantalla \IUref{IU18}{Registrar tareas} (ver figura~\ref{IU18}) aparece cuando el            profesor selecciona el comando Registrar tareas en la \IUref{IU3}{Pantalla principal  profesor}. 
+         En la parte superior aparecen seis opciones de que acciones puede realizar el actor las cuales son: {\bf registrar ingesta}, {\bf registrar actividades}, {\bf Registrar tareas}, {\bf Registrar reporte}, {\bf Tomar asistencia}, {\bf Cerrar Sesión}. 
+         El contenido muestra tres inputs solicitando Número de Sala, detalles actividad, nombre actividad, ponderacion y fecha de entrega.
+         en la parte de abajo tiene un boton que guarda las tareas en la bd
+        
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regtareas}{IU18}{Registrar tareas.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+Número de Sala, detalles actividad, nombre actividad, ponderacion y fecha de entrega.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Registrar ingesta}: muestra la \IUref{IU16}{Registrar ingesta}.
+        \item \IUbutton{Registrar actividades}: muestra la \IUref{IU17}{Registrar actividades}.
+        \item \IUbutton{Registrar tareas}: muestra la \IUref{IU18}{Registrar tareas}.
+        \item \IUbutton{Registrar reporte}: muestra la \IUref{IU23}{Registrar reporte}.
+        \item \IUbutton{Tomar asistencia}: muestra la \IUref{IU22}{Tomar asistencia}.
+        \item \IUbutton{Cerrar sesión}Termina la sesion del usuario y lo saca del sistema.
+        \item \IUbutton{Guardar} guarda la tarea de los niños en la bd y muestra el MSGX.
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Exito al guardar la tarea.
+\end{Citemize}
+

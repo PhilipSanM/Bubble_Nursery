@@ -1,0 +1,34 @@
+%--------------------------------------
+\newpage
+\section{IU8 Registrar profesor}
+
+\subsection{Objetivo}
+	Permite a {\bf Recursos Humanos} registrar un nuevo profesor.
+
+\subsection{Diseño}
+	Esta pantalla \IUref{IU8}{Registrar profesor} (ver figura~\ref{IU8}) aparece una vez que el usuario ha ingresado al aparte de Docente en la \IUref{IU4}{Pantalla principal Recursos Humanos}. 
+    En la pantalla aparecen tres text area: {\bf Nombre},{\bf Dirección},{\bf Número de telefono}, y el botón{\bf Enviar}. 
+
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regdocente}{IU8}{Registrar profesor.}
+
+\subsection{Salidas}
+
+	Mensaje de registro éxitoso.
+
+\subsection{Entradas}
+Nombre, dirección y número de teléfono del profesor.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Enviar}: Envía el formulario para registar al profesor. 
+\end{itemize}
+
+\subsection{Mensajes}
+\begin{Citemize}
+	\item El profesor se registró con exito.
+        \item Formato incorrecto, por favor vuelva a llenar el formulario.
+        \item El profesor ya está registrado.
+\end{Citemize}
+

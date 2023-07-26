@@ -1,0 +1,36 @@
+%--------------------------------------
+\newpage
+\section{IU14 Registrar comida}
+
+\subsection{Objetivo}
+	Permite al {\bf nutriologo} añadir una comida al menu del mes
+
+\subsection{Diseño}
+	Esta pantalla \IUref{IU14}{Registrar comida} (ver figura~\ref{IU14}) aparece cuando el nutriologo selecciona el comando registrar comida de la \IUref{IU1}{Pantalla principal nutriologo}. 
+ En la parte superior aparecen tres opciones de que acciones puede realizar el actor las cuales son {\bf añadir comida}, {\bf ver menú}, {\bf Cerrar Sesión}. 
+Tiene dos inputs para que el nutriologo los llena con el nombre de la comida y la fecha en la que se va a dar, ademas tiene tres radio boton donde se debe seleccionar uno para indicar el momento de la comida
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regcomida}{IU14}{Registrar comida.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+Nombre comida, KCalorias, Tiempo comida, Ingredientes
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Añadir comida}: muestra la \IUref{IU14}{Registrar comida}.
+	\item \IUbutton{ver menú}: Muestra el menu de comidas de todo el mes
+        \item \IUbutton{Cerrar sesión}Termina la sesion del usuario y lo saca del sistema
+        \item \IUbutton{Guardar} guarda la comida en la bd y muestra el MSGX
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item MSGX Exito al guardar la comida
+\end{Citemize}
+

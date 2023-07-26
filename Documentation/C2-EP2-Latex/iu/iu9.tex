@@ -1,0 +1,34 @@
+\newpage
+%--------------------------------------
+\section{IU9 Registrar padre de familia}
+
+\subsection{Objetivo}
+	Permite a {\bf Capital Humano} registrar a un tutor o padre de familia.
+
+\subsection{Diseño}
+	Esta pantalla \IUref{IU9}{Registrar padre de familia} (ver figura~\ref{IU9}) aparece una vez que el usuario ha ingresado al apartado de Tutor en \IUref{IU5}{Pantalla principal de capital humano}. 
+ En la pantalla aparecen tres text area: {\bf Nombre},{\bf Dirección},{\bf Número de telefono}, y el botón{\bf Enviar}. 
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regpadre}{IU9}{Registrar padre de familia.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+Número de Boleta y Contraseña del Estudiante.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Entrar}: Verifica que el Estudiante se encuentre registrado y la contraseña sea la correcta. Si la verificación es correcta, se muestra la \IUref{UI32}{Pantalla de Selección de Seminario}.
+	\item \IUbutton{Ayuda}: Muestra la ayuda de esta pantalla \IUref{IU50}{Pantalla de Ayuda}.
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item El tutor se registró con exito.
+        \item Formato incorrecto, por favor vuelva a llenar el formulario.
+        \item El tutor ya está registrado.
+\end{Citemize}

@@ -1,0 +1,35 @@
+\newpage
+%--------------------------------------
+\section{IU10 Registrar niño}
+
+\subsection{Objetivo}
+	Permite a {\bf Capital Humano} registrar a un nuevo niño en la guardería.
+
+\subsection{Diseño}
+	Esta pantalla \IUref{IU10}{Registrar niño} (ver figura~\ref{IU10}) aparece una vez que el usuario ha dado clic en la sección Infantes dentro de \IUref{IU5{Pantalla principal de capital humano}. 
+    en la parte superior aparecen cinco cuadros de texto, las cuales son {\bf nombre},{\bf apellido paterno},{\bf apellido materno},{\bf fecha de nacimiento} y {\bf género}, además aparece el botón para enviar el formulario {\bf enviar}. 
+
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{reginfante}{IU10}{Registrar niño.}
+
+\subsection{Salidas}
+
+	Mensaje de texto.
+
+\subsection{Entradas}
+Nombre completo, fecha de nacimiento y género del infante.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Enviar}: Envía el formulario para registar un nuevo infante
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Error con el formato de los datos, por favor vuelva a llenar el formulario.
+        \item Infante registrado exitosamente.
+        \item Error, el infante ya está registrado, por favor revise la información.
+\end{Citemize}
+

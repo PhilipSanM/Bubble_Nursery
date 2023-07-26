@@ -1,0 +1,65 @@
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU7}{Registrar menú}{
+		El nutriólogo llenara los datos de las comidas que se planean dar durante el mes y la fecha en que se planea que se den.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{nutriologo}{Nutriologo}}
+		\UCitem{Propósito}{Que los padres tengan conocimiento de las comidas que se le darán a los niños durante todo el mes.}
+		\UCitem{Entradas}{NombrePlatillo, kCal, ingredientes, momentoComida.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{Pantalla}
+		\UCitem{Precondiciones}{la fecha de la comida a registrar debe ser posterior a la fecha del día de hoy}
+		\UCitem{Postcondiciones}{Se visualizará en el calendario de comidas la comida registrada.}
+		\UCitem{Errores}{{\bf 1}: Si la fecha de la comida a registrar es la del día de hoy o alguna anterior, se mostrara el mensaje Err2 y se solicitara que cambie ese dato
+        \newline
+  
+	{\bf 2}: No se llenaron los datos correctamente; el sistema mostrara        en que campos se tiene error y solicitara su corrección.
+        \newline
+ 
+        {\bf 3}: Si la fecha y momento del dia de la comida a registrar coinciden con los de alguna comida ya registrada, el sistema dará la opción de modificar la comida ya registrada o de cambiar la comida por registrar a través del mensaje msg3}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IU1}{pantalla principal del nutriologo} .
+		\UCpaso[\UCactor] solicita registrar una comida.
+		\UCpaso muestra la \IUref{IU14}{Pantalla de Registro de comidas} .
+		\UCpaso[\UCactor] llena todos los datos solicitados para registrar una comida.
+            \UCpaso verifica que todos los datos fueron llenados y que son del tipo que corresponde. \Trayref{A}.
+		\UCpaso verifica que la fecha ingresada sea posterior a la de hoy \Trayref{B}.
+		\UCpaso verifica que no exista una comida en el mismo dia y al mismo momento. \Trayref{C}.
+		\UCpaso registra la comida y muestra el menú de comidas.
+	\end{UCtrayectoria}
+
+
+
+%--------------------------------------
+		\begin{UCtrayectoriaA}{A}{Algun dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+
+%--------------------------------------		
+            \begin{UCtrayectoriaA}{B}{La fecha de la comida es hoy o antes de hoy}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``La fecha de la comida debe ser porterior a la fecha del dia de hoy.''.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------
+		\begin{UCtrayectoriaA}{C}{La comida ya existe}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Esa comida ya estaba registrada, asegurece de que ingreso la fecha bien.''.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

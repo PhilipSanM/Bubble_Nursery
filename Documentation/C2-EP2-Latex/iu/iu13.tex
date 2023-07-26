@@ -1,0 +1,35 @@
+%--------------------------------------
+\section{IU13 Registrar nutriologo}
+
+\subsection{Objetivo}
+	Permite a {\bf recursos humanos} registrar a un nutriologo en el sistema
+
+\subsection{Diseño}
+	Esta pantalla \IUref{IU13}{Registrar nutriologo} (ver figura~\ref{IU13}) aparece una vez que el usuario ha ingresado al sistema y a seleccionado {\bf Alimentacion}
+ en la parte superior aparecen una opcion la cual es {\bf regresar}, y en el contenido viene la lista de nutriologos actuales y la opcion de guardar un nuevo nutriologo o eliminar uno de la lista,{\bf Guardar},{\bf Eliminar}. 
+
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regnutriologo}{IU13}{Registrar nutriologo.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+Nombre, direccion, numero de telefono.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{regresar}: permite al actor regresar a la \IUref{UI4}{Pantalla principal de recursos humanos}.
+ 	\item \IUbutton{Guardar}: permite a recursos humanos guardar un nuevo nutriologo en el sistema.
+  	\item \IUbutton{Eliminar}: permite a recursos humanos eliminar a un nutriologo del sistema.
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Nuevo nutriologo registrado.
+        \item Nutriologo eliminado.
+\end{Citemize}
+

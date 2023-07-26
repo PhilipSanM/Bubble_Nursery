@@ -1,0 +1,54 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU22}{Generar reporte}{
+		El profesor genera un reporte de un niño.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Diego Rosas Cruz}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{Profesor}{Capital humano}}
+		\UCitem{Propósito}{Se necesita llevar registro de las actividades de los niños, sus cambios de ropa, ingestas y evacuaciones, así como las incidicencias que ocurrieron durante el día.}
+		\UCitem{Entradas}{Asistencia, evacuaciones, ingesta, cambios de ropa, información adicional, actividades, tareas.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{El niño debe estar registrado.
+  El profesor que genere el reporte debe haber iniciado sesión.
+  }
+		\UCitem{Postcondiciones}{Se generará un nuevo reporte en el sistema.}
+	   \UCitem{Errores}{
+            \begin{itemize}
+                \item No se llenaron los datos correctamente; el sistema mostrara en que campos se tiene error y solicitara su corrección.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IUX}{Pantalla de profesores}.
+		\UCpaso[\UCactor] solicita generar reporte.
+		\UCpaso muestra la \IUref{IUX}{Generar Reporte}.
+		\UCpaso[\UCactor] Ingresa los datos del niño.
+        \UCpaso Verifica que todos los datos estén llenados correctamente \Trayref{A}.
+		\UCpaso registra un reporte nuevo y muestra al actor el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+		\begin{UCtrayectoriaA}{A}{Algun dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

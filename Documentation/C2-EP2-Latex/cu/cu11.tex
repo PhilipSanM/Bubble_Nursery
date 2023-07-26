@@ -1,0 +1,40 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU11}{Registrar actividades}{
+		El profesor registra las actividades realizadas por los infantes durante el dia.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{docente}{Profesor}}
+		\UCitem{Propósito}{Que los padres de familia puedan llevar el seguimiento de las actividades que realizan sus hijos en la guarderia.}
+		\UCitem{Entradas}{Número de sala, nombre actividad, detalles actividad, Ponderacion.}
+		\UCitem{Origen}{Teclado}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{Pantalla}
+		\UCitem{Precondiciones}{Deben existir alumnos registrados.}
+		\UCitem{Postcondiciones}{Las actividades de los infantes quedaran registradas para que los padres las puedan ver.}
+		\UCitem{Errores}{ninguno}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema
+		\UCpaso Muestra la \IUref{IU3}{pantalla principal profesor}
+		\UCpaso[\UCactor] Selecciona la opcion registrar actividad.
+		\UCpaso Despliega la \IUref{IU17}{Registro actividad} con la lista de Salas del profesor.
+		\UCpaso[\UCactor] Selecciona la sala a la que desee agregarle una actividad.
+		\UCpaso Solicita que llene los datos de la actividad.
+		\UCpaso[\UCactor] Llena los datos de la actividad.
+		\UCpaso Agrega la actividad y muestra el mensaje {\bf MSGX}:.
+	\end{UCtrayectoria}
+
+%--------------------------------------
+
+		
+		
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

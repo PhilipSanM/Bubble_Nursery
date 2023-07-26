@@ -1,0 +1,44 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU14}{Registrar médico}{
+		Recursos humanos registrara al medico de la guarderia para que pueda registrar las incidencias medicas.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{recursosHumanos}{Recursos Humanos}}
+		\UCitem{Propósito}{Que el medico pueda realizar reportes de los incidentes medicos.}
+		\UCitem{Entradas}{Nombre, licencia medica, fecha nacimiento, salario, curp, telefono, direccion.}
+		\UCitem{Origen}{Teclado}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{Pantalla}
+		\UCitem{Precondiciones}{Que la licencia medica no este ya registrada.}
+		\UCitem{Postcondiciones}{El médico quedara inscrito.}
+		\UCitem{Errores}{
+            \begin{itemize}
+                \item La cedula profesional ya existe por lo que el sistema solicita que la vuelva a ingresar
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \Trayref{IU4}pantalla principal Recursos humanos.
+		\UCpaso[\UCactor] solicita registrar medico.
+		\UCpaso muestra la \IUref{IU19}{Registrar médico} .
+		\UCpaso[\UCactor] llena todos los datos solicitados para registrar un médico.
+            \UCpaso verifica que la licencia medica no este registrada. \Trayref{A}.
+		\UCpaso registra la comida y muestra el menú de comidas.
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{La licencia medica ya esta registrada}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``La cedula ingresada ya se encuentra registrada, favor de corregirla.''.
+			\UCpaso Continua en el paso 7.
+		\end{UCtrayectoriaA}
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

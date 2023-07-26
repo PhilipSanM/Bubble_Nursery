@@ -1,0 +1,37 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU19}{Tomar asistencia}{
+		El profesor lleva el registro de que infantes se encuentran en la guarderia para evitar problemas de falta de infantes.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{docente}{Profesor}}
+		\UCitem{Propósito}{Tener el control de que infantes se encuentran en la guarderia.}
+		\UCitem{Entradas}{Ninguna.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{NombreInfante.}
+		\UCitem{Destino}{Pantalla}
+		\UCitem{Precondiciones}{Debe ser un dia habil.}
+		\UCitem{Postcondiciones}{Queda registrada la asistencia de los infantes.}
+		\UCitem{Errores}{ninguno}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+            \UCpaso[\UCactor] Entra al sistema
+            \UCpaso Muestra la \IUref{IU3}{pantalla principal profesor}
+            \UCpaso[\UCactor] Solicita Registrar la asistencia del dia
+            \UCpaso Muestra la \IUref{IU22}{Toma de asistencia}
+            \UCpaso Solicita la sala de la cual se quiere pasar asistencia
+            \UCpaso [\UCactor] Ingresa la sala
+            \UCpaso Muestra la lista de los nombres de los infantes que se encuentran registrados en esa sala
+            \UCpaso[\UCactor] Selecciona a los alumnos que se encuentran presentes en la sala
+            \UCpaso Registra la asistencia de los infantes
+	\end{UCtrayectoria}
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

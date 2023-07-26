@@ -1,0 +1,39 @@
+%--------------------------------------
+\newpage
+\section{IU12 Registrar sala}
+
+\subsection{Objetivo}
+	Permite a {\bf Capital Humano} registrar una sala donde se cuidaran a los infantes.
+
+\subsection{Diseño}
+	 Esta pantalla \IUref{IU12}{Registrar sala} (ver figura~\ref{IU12}) aparece cuando el            profesor selecciona el comando Salas en la \IUref{IU5}{Pantalla principal  profesor}. 
+         en la parte superior aparecen tres opciones de que acciones puede realizar el actor las cuales son {\bf Tutor},{\bf Infantes},{\bf Salas},{\bf Cerrar Sesión}. 
+         El contenido muestra dos inputs solicitando nombre de Sala y capacidad.
+         en la parte de abajo tiene un boton que guarda las tareas en la bd
+        
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regsala}{IU12}{Registrar sala.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+nombre de Sala y capacidad.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Tutor}: Muestra la \IUref{IU9}{modificar tutores}.
+	\item \IUbutton{Infantes}: Muestra la \IUref{IU10}{modificar  infantes}.
+ 	\item \IUbutton{Salas}: Muestra la \IUref{IU12}{modificar salas}.
+        \item \IUbutton{Cerrar sesión}Termina la sesion del usuario y lo saca del sistema.
+        \item \IUbutton{Guardar} guarda la sala en la bd y muestra el MSGX
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Exito registrando la sala.
+\end{Citemize}
+

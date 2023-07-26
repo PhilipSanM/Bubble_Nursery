@@ -1,0 +1,171 @@
+\begin{BussinesRule}{RN1}{Fecha de Nacimiento correcta.}
+	\BRitem[Tipo:] Regla de integridad referencial o estructural. 
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:]	Las Fechas de Nacimiento de los infantes debe ser mayores al día Primero de Enero del año 2018 y menor a tres meses antes de la fecha actual.
+	\BRitem[Motivación:] Evitar fraudes al PRONIM por el registro de personas que no han nacido al momento de su registro.
+	\BRitem[Sentencia:] $\forall p \in Persona \Rightarrow 01-Enero-2018~<~p.fechaDeNacimiento~<~fechaActual menos 3 meses$.
+	\BRitem[Ejemplo positivo:] Para el día 23 de Junio del 2023, cumplen la regla: 		
+        \begin{itemize}
+        	\item 11 de Octubre del 2020
+			\item 20 de Diciembre del 2021
+			\item 2 de Enero del 2023
+        \end{itemize}
+	
+	\BRitem[Ejemplo negativo:] Para el día 23 de Junio del 2013, no cumplen la 
+		\begin{itemize}
+        	\item 12 de junio del 2013
+			\item 20 de Diciembre del 2014
+			\item 1 de Enero del 1900
+			\item 31 de Diciembre del 2024
+        \end{itemize}
+	
+	\BRitem[Referenciado por:] \hyperlink{CU3}{CU3}.
+\end{BussinesRule}
+
+\begin{BussinesRule}{RN2}{Atencion medica.} 
+	\BRitem[Tipo:] Regla de Condicion. 
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Cuando un infante requiera atencion medica de bajo nivel , el medico debe atenderlo de manera oportina, ademas de registrar el reporte de la incidencia medica.
+        \BRitem[Motivación:] Garantiza el cuidado oportuno de los infantes, ademas de que notifica a los padres de familia cuando ocurre algo con sus hijos.
+	\BRitem[Ejemplo positivo:] 
+                \begin{itemize}
+                    \item Juan se resbaló en el ultimo escalon, por lo que golpeo su cabeza, por lo que fue revisado por el medico para descartar una contucion y registra el reporte del incidente.
+                \end{itemize}
+	\BRitem[Ejemplo negativo:] 
+                \begin{itemize}
+                    \item Pedro se cayo y se raspo la rodilla, por lo que el medico le lavo la herida pero no realizo el reporte
+	        \end{itemize}
+         
+	\BRitem[Referenciado por:] \hyperlink{CU15}{CU15}.
+\end{BussinesRule}
+
+\begin{BussinesRule}{RN3}{Notificacion de tareas}
+	\BRitem[Tipo:] Regla de condicion.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Influencia. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Es responsabilidad del profesor dar a conocer las tareas que deberan hacer los infantes en sus casas para reforzar lo visto en el dia.
+ 
+        \BRitem[Motivacion] Aumentar el desarrollo de los infantes, ademas de tener una buena comunicacion entre profesores y padres de familia
+        
+	\BRitem[Ejemplo positivo:] 
+                \begin{itemize}
+                    \item el profesor moises notifica a los padres de familia sobre todas las actividades que requiere que los infantes realicen en sus casa
+                \end{itemize}
+	
+	\BRitem[Ejemplo negativo:] 
+                \begin{itemize}
+                    \item El profesor humberto no realiza la notificacion de tareas de los infantes, lo cual podria dificultar el progreso de los infantes
+                \end{itemize}
+ 
+	\BRitem[Referenciado por:] \hyperlink{CU12}{CU12}.
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR4}{Toma de asistencia}
+	\BRitem[Tipo:] Regla de integridad referencial o estructural.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Todos los profesores deberan tomar asistencia de los infantes todos los dias.
+        \BRitem[Motivacion] Tener un control de cuando asistieron los infantes para poder mostrarlo a los padres de familia en caso de que se requiera
+        
+	\BRitem[Ejemplo positivo:] 
+            \begin{itemize}
+                \item El profesor ricardo pasa asistencia todos los dias a las 9:15
+            \end{itemize}
+	
+	\BRitem[Ejemplo negativo:] 
+	       \begin{itemize}
+	           \item  El profesor humberto no pasa lista en la guarderia, pero cuando llega a su casa anota a los alumnos que recuerda que estuvieron.
+	       \end{itemize}
+	\BRitem[Referenciado por:] \hyperlink{CU19}{CU19} 
+\end{BussinesRule}
+
+\begin{BussinesRule}{RN5}{Asignacion de salas por edad}
+	\BRitem[Tipo:] Regla de inferencia.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Los infantes seran asignados a salas basados en rangos de edades.
+        \BRitem[Motivacion] Que los infantes tengan una buena interaccion social.
+		
+	\BRitem[Ejemplo positivo:] 
+	        \begin{itemize}
+	            \item Juanito de 7 meses fue asignado a una sala con infantes de 3 meses a 1 año 
+	        \end{itemize}
+	\BRitem[Ejemplo negativo:] 
+	        \begin{itemize}
+	            \item Juanito de 2 años fue asignado a una sala con infantes de 6 años
+	        \end{itemize}
+	\BRitem[Referenciado por: ]CU3 
+\end{BussinesRule}
+
+\begin{BussinesRule}{RN6}{Informar cantidad de ingesta}
+	\BRitem[Tipo:] Inferencia de un hecho.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Los profesores deben de realizar el reporte de las cantidades de comida ingeridas por los infantes.
+        \BRitem[Motivacion] Que los padres de familia esten informados acerca de la alimentacion de sus hijos
+	\BRitem[Ejemplo positivo:] 
+	        \begin{itemize}
+	            \item El profesor alexis revisa cuanta comida queda en los platos de los infantes y anota cuanto comio cada quien, posteriormente registra las cantidades de comida ingeridas por los niños
+	        \end{itemize}
+	\BRitem[Ejemplo negativo:] 
+	        \begin{itemize}
+	            \item El profesor horacio no revisa cuanto come cada niño, y cuando le solicitan el reporte de ingestas registra que todos los niños acabaron toda su comida.
+	        \end{itemize}
+	\BRitem[Referenciado por:]CU9 
+\end{BussinesRule}
+
+\begin{BussinesRule}{RN7}{Informacion sobre eventos en la guarderia.}
+	\BRitem[Tipo:] Regla de integridad.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] El director debe notificar de todos los eventos academicos planeados a los padres de familia con al menos dos semanas de antelacion:
+		
+	\BRitem[Motivacion:] Que los padres de familia esten notificados de los eventos, teniendo sufuciente tiempo para saber si van a poder asistir, asi como de conseguir los materiales que se requieran.
+	\BRitem[Ejemplo positivo:] 
+	        \begin{itemize}
+	            \item El director de la guarderia notifico el dia 21 de marzo que para el dia 10 de mayo se planea hacer un festival por el dia de las madres.
+	        \end{itemize}
+	\BRitem[Ejemplo negativo:] 
+	        \begin{itemize}
+	            \item El director de la guarderia notifica el 10 de septiembre que el dia 16 de septiembre tienen planeado realizar una kermes por el dia de la independencia
+	        \end{itemize}
+	\BRitem[Referenciado por:] CU17 
+\end{BussinesRule}
+

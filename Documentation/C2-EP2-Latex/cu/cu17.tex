@@ -1,0 +1,61 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU17}{Registrar evento escolar}{
+		El director registrará un evento escolar.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Diego Rosas Cruz}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{capitalHumano}{Capital humano}}
+		\UCitem{Propósito}{Es necesario registrar el evento escolar para informar a los padres.}
+		\UCitem{Entradas}{fecha del evento, nombre del evento, hora de inicio y fin del evento.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{El director debe haber iniciado sesión.
+  }
+		\UCitem{Postcondiciones}{Se registrará un evento.}
+	   \UCitem{Errores}{
+            \begin{itemize}
+                \item Si el director elige una cita que ya está ocupada para otro evento el sistema le pedirá que escoja otra cita.
+                \item No se llenaron los datos correctamente; el sistema mostrara en que campos se tiene error y solicitara su corrección.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IUX}{Pantalla principal}.
+		\UCpaso[\UCactor] solicita registrar evento
+		\UCpaso muestra la \IUref{IUX}{Registrar evento}.
+		\UCpaso[\UCactor] Ingresa el nombre, fecha, hora de inicio y fin del evento. 
+		\UCpaso verifica  que en la fecha y hora indicadas no haya otro evento.\Trayref{A}.
+        \UCpaso Verifica que todos los datos estén llenados correctamente \Trayref{B}.
+		\UCpaso registra un nuevo evento y muestra al director el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+ %--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{Ya hay un evento registrado en esa fecha.}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Esa fecha y horas ya están ocupadas, por favor ingrese otras.'.
+			\UCpaso Continua en el paso 7 del caso de uso.
+		\end{UCtrayectoriaA}
+  %--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Algún dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 8 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

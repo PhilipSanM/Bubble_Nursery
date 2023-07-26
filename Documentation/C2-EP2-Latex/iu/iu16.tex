@@ -1,0 +1,41 @@
+%--------------------------------------
+\newpage
+\section{IU16 Registrar ingesta}
+
+\subsection{Objetivo}
+	Permite al {\bf profesor} Registrar que tanto comieron los niños en una de las comidas del dia.
+
+\subsection{Diseño}
+	Esta pantalla \IUref{IU16}{Registrar ingesta} (ver figura~\ref{IU16}) aparece cuando el profesor selecciona el comando registrar ingesta en la \IUref{IU3}{Pantalla principal profesor}. 
+ En la parte superior aparecen seis opciones de que acciones puede realizar el actor las cuales son: {\bf registrar ingesta}, {\bf registrar actividades}, {\bf Registrar tareas}, {\bf Registrar reporte}, {\bf Tomar asistencia}, {\bf Cerrar Sesión}. 
+ El contenido muestra los nombres de los niños y tres opciones para mostrar cuanto comio
+ en la parte de abajo tiene un boton que guarda las ingestas en la bd
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.7]{regingesta}{IU16}{Registrar ingesta.}
+
+\subsection{Salidas}
+
+	MSGX.
+
+\subsection{Entradas}
+TiempoComida
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Registrar ingesta}: muestra la \IUref{IU16}{Registrar ingesta}.
+        \item \IUbutton{Registrar actividades}: muestra la \IUref{IU17}{Registrar actividades}.
+        \item \IUbutton{Registrar tareas}: muestra la \IUref{IU18}{Registrar tareas}.
+        \item \IUbutton{Registrar reporte}: muestra la \IUref{IU23}{Registrar reporte}.
+        \item \IUbutton{Tomar asistencia}: muestra la \IUref{IU22}{Tomar asistencia}.
+        \item \IUbutton{Cerrar sesión}Termina la sesion del usuario y lo saca del sistema
+        \item \IUbutton{Guardar} guarda las ingestas de los niños en la bd y muestra el MSGX
+\end{itemize}
+
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item MSGX Exito al guardar las ingestas
+\end{Citemize}
+

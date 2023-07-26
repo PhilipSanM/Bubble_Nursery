@@ -1,0 +1,61 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU2}{Registrar padre de familia}{
+		Capital humano llenara los datos de un padre o tutor para registrarlo en el sistema.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Diego Rosas Cruz}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{capitalHumano}{Capital humano}}
+		\UCitem{Propósito}{Es necesario conocer al tutor o tutores de cada niño que entra en la guardería para poder notificarles cada que se requiera..}
+		\UCitem{Entradas}{Nombre, dirección, no. de telefono.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{El padre o tutor no debe estar registrado.}
+		\UCitem{Postcondiciones}{Habrá un padre o tutor nuevo registrado en el sistema y uno o más niños se asignarán a este tutor.}
+		\UCitem{Errores}{
+            \begin{itemize}
+                \item Si el tutor que intenta registar ya existe el sistema mostrará el mensaje de error y solicitará otra vez los datos.
+                \item No se llenaron los datos correctamente; el sistema mostrara en que campos se tiene error y solicitara su corrección.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IU5}{Pantalla principal Capital humano}.
+		\UCpaso[\UCactor] solicita registrar un padre o tutor.
+		\UCpaso muestra la \IUref{IUX}{Registrar Padre o tutor}.
+		\UCpaso[\UCactor] llena todos los datos solicitados para registrar un padre o tutor.
+		\UCpaso verifica que ese padre o tutor no esté registrado\Trayref{A}.
+		\UCpaso Verifica que todos los datos esten llenados correctamente \Trayref{B}.
+		\UCpaso registra el nuevo padre o tutor y muestra al actor el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+ %--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El padre o tutor ya existe}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Ese padre o tutor ya está registrado, por favor revise los datos.''.
+			\UCpaso Continua en el paso 7 del caso de uso.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Algun dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

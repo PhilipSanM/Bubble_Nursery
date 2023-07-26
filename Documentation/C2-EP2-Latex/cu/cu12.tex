@@ -1,0 +1,48 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU12}{Registrar tareas}{
+		El profesor registra las actividades que los infantes tienen que realizar en sus casas
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{docente}{Profesor}}
+		\UCitem{Propósito}{Que los padres de familia tengan conocimiento de las actividades que deben hacer con sus hijos para reforzar los visto en clase.}
+		\UCitem{Entradas}{Número de sala, nombre Actividad, Setalle actividad, Ponderacion y fechaEntrega.}
+		\UCitem{Origen}{Teclado}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{Pantalla}
+		\UCitem{Precondiciones}{Deben existir alumnos registrados en la sala.}
+		\UCitem{Postcondiciones}{Se registrs una actividad en casa.}
+		\UCitem{Errores}{
+                    \begin{itemize}
+                        \item La fechaEntrega es anterior a la fefcha del dia de hoy
+                    \end{itemize}
+        }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+		
+		\UCpaso[\UCactor] Accede al sistema
+		\UCpaso Muestra la \IUref{IU3}{pantalla principal profesor}
+		\UCpaso[\UCactor] Selecciona la opcion registrar actividad.
+		\UCpaso Despliega la \IUref{IU18}{Registro tareas} con la lista de Salas del profesor.
+		\UCpaso[\UCactor] Selecciona la sala a la que desee agregarle una actividad.
+		\UCpaso Solicita que llene los datos de la actividad.
+		\UCpaso[\UCactor] Llena los datos de la actividad.
+            \UCpaso Verifica que la fechaEntrega sea posterior a la fecha de hoy \Trayref{A}.
+		\UCpaso Agrega la actividad y muestra el mensaje {\bf MSGX}:.		
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{La fechaEntrega no es posterior a la dehca del dia de hoy}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``La fecha de entrega debe ser posterior a la fecha del dia de hoy.''.
+			\UCpaso Continua en el paso 9.
+		\end{UCtrayectoriaA}
+		
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

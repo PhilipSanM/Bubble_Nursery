@@ -1,0 +1,169 @@
+%=========================================================
+\chapter{Modelo dinámico}	
+\label{cap:modDinamico}
+
+	Este capítulo describe en modelo dinámico del sistema. en el se detallan todos los escenarios de ejecución del sistema. La figura~\ref{fig:casosDeUso} muestra el diagrama general del sistema y sus sib sistemas, y la figura~\ref{fig:casosDeUsoDetalle} muestra todos los casos de uso del sistema. En este documento solo detallamos los casos de uso del subsistema de gestión de cursos.
+	
+\begin{figure}[htbp]
+	\begin{center}
+		\fbox{\includegraphics[width=.8\textwidth]{images/casosDeUso}}
+		\caption{Diagrama de casos de uso del sistema.}
+		\label{fig:casosDeUso}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[angle=90, width=.7\textwidth]{images/casosDeUsoDetalle}
+		\caption{Diagrama detallado del sistema.}
+		\label{fig:casosDeUsoDetalle}
+	\end{center}
+\end{figure}
+
+%---------------------------------------------------------
+\section{Descripción de actores}
+
+%---------------------------------------------------------
+\begin{Usuario}{\hypertarget{recursosHumanos}{\subsection{Recursos humanos}}}{
+	Es el responsable de la gestion del personal dentro de la guarderia.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Administrar la contratacion y despido del personal
+		
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Licenciatura en recursos humanos, administracion de empresas o afin.
+		\item un año de experiencia minimo en gestion de recursos humanos.
+		\item Habilidades de liderazgo y trato humano.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{capitalHumano}{\subsection{Capital humano}}}{
+	Es el encargado de la inscripcion de los infantes, asi como de recolectar la informacion de sus padres de familia
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Gestionar los expedientes de los infantes.
+		\item Gestionar el estatus del infante dentro de la guarderia.
+		\item Es el enlace entre los padres de familia y la guarderia.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Licenciatura en trabajo social o afin.
+		\item Experiencia en la gestion de documentacion de personas, preferiblemente ede               infantes.
+		\item Tener un buen trato con las personas.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{medico}{\subsection{Médico}}}{
+	Es el encargado de mantener la salud y el bienestar de los infantes en la guarderia.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Supervisar la salud de los infantes.
+		\item Proporcionar atencion medica a los infantes en caso de algun incidente.
+		\item Proporcionar informacion sobre la salud de los infantes a sus padres.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Titulo en medicina, preferiblemente con especialidad en pediatria.
+		\item Licencia medica valida.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{nutriologo}{\subsection{Nutriologo}}}{
+	Es el encargado de la buena alimentacion de los infantes.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Diseñar un plan alimenticio para los infantes que sea saludable.
+		\item Dar equivalencias de comida en caso de alergias.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Licenciatura en alimentos o afin.
+		\item Experiencia en nutricion pediatrica.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{director}{\subsection{Director}}}{
+	Es la cabeza de la guarderia, es el encargado de la planeacion de los eventos.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Creacion de eventos escolares.
+		\item Gestiona los dias habiles de la guarderia.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Maestria en el campo de la educacion.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{docente}{\subsection{Profesor}}}{
+	Es el encargado de la educacion de los infantes, asi como de su cuidado.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Supervisar a los infantes.
+		\item Dar clases a los infantes.
+		\item Dar informe a los padres de familia sobre el progreso de sus hijos y de su                  actividad academica.
+            \item Llevar un registro de las comidas evacuaciones y cambios de ropa de los infantes
+            \item Notificar sobre los materialies que se requieran para la realizacion de actividades.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Titulo en pedagogia o afin.
+		\item Experiencia en el cuidado de infantes.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{padre}{\subsection{Padre de familia}}}{
+	Es el encargado legal del niño inscrito en la guarderia, recibe y proporciona informacion sobre el infante
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Llevar al niño a la guarderia a tiempo.
+		\item Recoger al niño de la guarderia a tiempo.
+		\item Brindar a la guarderia cambios de ropa para el niño.
+            \item Asegurarse de la realizacion de actividades en casa del niño
+            \item Llevar el material solicitado por la guarderia
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Es el responsable legal del niño.
+		\item Responsabilidad.
+    \end{itemize}
+\end{Usuario}
+
+A continuación se detallan los casos de uso.
+
+%---------------------------------------------------------
+% CASOS DE USO
+
+\input{cu/cu1}
+\input{cu/cu2}
+\input{cu/cu3}
+\input{cu/cu4}
+\input{cu/cu5}
+\input{cu/cu6}
+\input{cu/cu7}
+\input{cu/cu8}
+\input{cu/cu9}
+\input{cu/cu11}
+\input{cu/cu12}
+\input{cu/cu14}
+\input{cu/cu15}
+\input{cu/cu17}
+\input{cu/cu19}
+\input{cu/cu22}
+

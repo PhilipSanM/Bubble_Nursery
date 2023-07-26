@@ -1,0 +1,61 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU1}{Registrar profesores}{
+		Recursos humanos llenara los datos de un profesor para registrarla en el sistema.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Diego Rosas Cruz}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{recursosHumanos}{Recursos humanos}}
+		\UCitem{Propósito}{Se necesita registrar a los profesores para asignarlos a salas y luego asignar niños que vayan a tomar clase con cada uno de estos profesores.}
+		\UCitem{Entradas}{nombre, dirección, no. de teléfono.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{El profesor no debe estar registrado.}
+		\UCitem{Postcondiciones}{Habrá un profesor nuevo registrado en el sistema.}
+		\UCitem{Errores}{
+            \begin{itemize}
+                \item Si el profesor que intenta registar ya existe el sistema mostrará el mensaje de error y solicitará otra vez los datos.
+                \item No se llenaron los datos correctamente; el sistema mostrara en que campos se tiene error y solicitara su corrección.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IU4}{Pantalla principal Recursos Humanos}.
+		\UCpaso[\UCactor] solicita registrar un profesor.
+		\UCpaso muestra la \IUref{IUX}{Registrar Profesor}.
+		\UCpaso[\UCactor] llena todos los datos solicitados para registrar un profesor.
+		\UCpaso verifica que ese profesor no esté registrado\Trayref{A}.
+		\UCpaso Verifica que todos los datos esten llenados correctamente \Trayref{B}.
+		\UCpaso registra el nuevo profesor y muestra al actor el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+ %--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El profesor ya existe}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Ese profesor ya está registrado, por favor revise los datos.''.
+			\UCpaso Continua en el paso 7 del caso de uso.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Algun dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

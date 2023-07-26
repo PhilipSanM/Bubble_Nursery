@@ -1,0 +1,42 @@
+%--------------------------------------
+\newpage
+\section{IU22 tomar asistencia}
+
+\subsection{Objetivo}
+	Permite al {\bf profesor} tomar la asistencia de los niños para saber que niños se encuentran en la guarderia el dia de hoy
+
+\subsection{Diseño}
+	   Esta pantalla \IUref{IU22}{Tomar asistencia} (ver figura~\ref{IU22}) aparece cuando el            profesor selecciona el comando Tomar asistencia en la \IUref{IU3}{Pantalla principal  profesor}. 
+         En la parte superior aparecen seis opciones de que acciones puede realizar el actor las cuales son: {\bf registrar ingesta}, {\bf registrar actividades}, {\bf Registrar tareas}, {\bf Registrar reporte}, {\bf Tomar asistencia}, {\bf Cerrar Sesión}. 
+         El contenido muestra los nombres de los niños y dos opciones para registrar si asistio o no
+         en la parte de abajo tiene un boton que guarda las ingestas en la bd
+         
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.8]{tomarasistencia}{IU22}{Tomar asistencia.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+        Ninguna.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Registrar ingesta}: muestra la \IUref{IU16}{Registrar ingesta}.
+        \item \IUbutton{Registrar actividades}: muestra la \IUref{IU17}{Registrar actividades}.
+        \item \IUbutton{Registrar tareas}: muestra la \IUref{IU18}{Registrar tareas}.
+        \item \IUbutton{Registrar reporte}: muestra la \IUref{IU23}{Registrar reporte}.
+        \item \IUbutton{Tomar asistencia}: muestra la \IUref{IU22}{Tomar asistencia}.
+        \item \IUbutton{Cerrar sesión}Termina la sesion del usuario y lo saca del sistema
+        \item \IUbutton{Guardar} guarda la asistencia de los niños en la bd y muestra el MSGX
+\end{itemize}
+
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Exito al guardar la asistencia
+\end{Citemize}
+

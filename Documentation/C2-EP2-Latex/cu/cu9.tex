@@ -1,0 +1,51 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU9}{Registrar ingesta}{
+		El profesor debera registrar la cantidad de comida que ingirio cada infante en cada comida.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{docente}{profesor}}
+		\UCitem{Propósito}{Que los padres de familia puedan saber que tanto comieron sus hijos.}
+		\UCitem{Entradas}{BoletaInfante, CantidadComida, TiempoComida.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{Pantalla}
+		\UCitem{Precondiciones}{El infante debe estar registrado.}
+		\UCitem{Postcondiciones}{El infante va a tener registrada una comida del dia.}
+		\UCitem{Errores}{ninguno}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso Muestra la \IUref{IU3}{Pantalla principal profesor}.
+		\UCpaso[\UCactor] Solicita registrar la ingesta de los infantes.
+		\UCpaso Muestra la \IUref{IU16}{Registro ingesta}.
+		\UCpaso Solicita los datos de la ingesta.
+		\UCpaso [\UCactor] Llena los datos de la ingesta de los infantes.
+            \UCpaso Muestra el {\bf MSGX}
+	\end{UCtrayectoria}
+
+
+%--------------------------------------
+% Puntos de extensión
+\subsection{Puntos de extensión}
+\UCExtenssionPoint{
+	% Cuando:
+	Los niños ya comieron y el profesor tiene un momento libre.
+}{
+	% Durante la región:
+	Del paso 4 al paso 9.
+}{
+	% Casos de uso a los que extiende:
+        Ninguno.
+}
+		
+		
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

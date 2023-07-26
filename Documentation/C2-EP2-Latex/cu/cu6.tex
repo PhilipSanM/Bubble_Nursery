@@ -1,0 +1,60 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU6}{Registrar nutriólogo}{
+		Recursos humanos registrará a un nuevo nutriólogo.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Diego Rosas Cruz}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{recursosHumanos}{Recursos humanos}}
+		\UCitem{Propósito}{Se necesita tener a cada nutriólogo registrado para saber quién está haciendo el menú en caso de que ocurra alguna incidencia.}
+		\UCitem{Entradas}{nombre, dirección, numero de telefono.}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{El nutriólogo que se busca registrar no debe estar registrado en el sistema..}
+		\UCitem{Postcondiciones}{Habrá un nuevo nutriólogo registrado en el sistema.}
+	   \UCitem{Errores}{
+            \begin{itemize}
+                \item Si el nutriólogo que intenta registrar ya existe el sistema mostrará el mensaje de error y solicitará otra vez los datos.
+                \item No se llenaron los datos correctamente; el sistema mostrara en que campos se tiene error y solicitara su corrección.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IU4}{Pantalla principal Recursos humanos}.
+		\UCpaso[\UCactor] solicita registrar nutriólogo
+		\UCpaso muestra la \IUref{IUX}{Registrar nutriólogo}.
+		\UCpaso[\UCactor] Ingresa datos del nutriólgo
+		\UCpaso verifica que el nutriólogo no exista en el sistema..\Trayref{A}.
+        \UCpaso Verifica que todos los datos estén llenados correctamente \Trayref{B}.
+		\UCpaso registra un nuevo nutriólgo y muestra al actor el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+ %--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El nutriólogo ya está registrado en el sistema.}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Ese nutriólogo ya está registrado en el sistema, por favor ingrese los datos de un nuevo nutriólogo''.
+			\UCpaso Continua en el paso 7 del caso de uso.
+		\end{UCtrayectoriaA}
+  %--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Algun dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.

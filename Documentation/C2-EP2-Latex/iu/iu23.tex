@@ -1,0 +1,38 @@
+%--------------------------------------
+\section{IU23 Registrar reporte}
+
+\subsection{Objetivo}
+	Generar los reportes y guardarlos con su respectivo infante.
+
+\subsection{Diseño}
+	 Esta pantalla \IUref{IU23}{Registrar reporte} (ver figura~\ref{IU23}) aparece cuando el            profesor selecciona el comando Registrar reporte en la \IUref{IU3}{Pantalla principal  profesor}. 
+         En la parte superior aparecen seis opciones de que acciones puede realizar el actor las cuales son: {\bf registrar ingesta}, {\bf registrar actividades}, {\bf Registrar tareas}, {\bf Registrar reporte}, {\bf Tomar asistencia}, {\bf Cerrar Sesión}. 
+         El contenido muestra cuatro inputs solicitando informacion adicional, numero de cambios de ropa, numero de evacuaciones y la opcion de generar el reporte para los infantes que ya tienen echo su reporte, con el boton de registrar.
+         
+        
+\IUfig[.8]{regreporte}{IU23}{Registrar reporte.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+Evacuaciones, cambios de ropa, informacion adicional, registrar reporte, 
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Registrar ingesta}: muestra la \IUref{IU16}{Registrar ingesta}.
+        \item \IUbutton{Registrar actividades}: muestra la \IUref{IU17}{Registrar actividades}.
+        \item \IUbutton{Registrar tareas}: muestra la \IUref{IU18}{Registrar tareas}.
+        \item \IUbutton{Registrar reporte}: muestra la \IUref{IU23}{Registrar reporte}.
+        \item \IUbutton{Tomar asistencia}: muestra la \IUref{IU22}{Tomar asistencia}.
+        \item \IUbutton{Cerrar sesión}Termina la sesion del usuario y lo saca del sistema.
+        \item \IUbutton{Registrar} registra el reporte creado anteriormente con los infantes seleccionados.
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Exito al registrar los reportes.
+\end{Citemize}
+

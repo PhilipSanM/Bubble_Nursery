@@ -1,0 +1,34 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU15}{Registrar incidencia médica}{
+		El médico registra el estado de salud de los infantes que sufran algun incidente que requiera de servicio médico
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Jose Angel Robles Otero}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{medico}{Medico}}
+		\UCitem{Propósito}{Que los padres de familia tengan parte cuando ocurra algun incidente con sus hijos.}
+		\UCitem{Entradas}{Número de boleta, EstadoInfante, detalles.}
+		\UCitem{Origen}{Teclado}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{Pantalla}
+		\UCitem{Precondiciones}{El infante tuvo un incidente.}
+		\UCitem{Postcondiciones}{Se generara el reporte del incidente para que el padre de familia del infante lo pueda visualizar.}
+		\UCitem{Errores}{ninguno}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IU2}{pantalla principal médico}.
+		\UCpaso[\UCactor] solicita registrar una incidencia medica.
+		\UCpaso muestra la \IUref{IU20}{Pantalla de Registro de incidencias médicas} .
+		\UCpaso[\UCactor] llena todos los datos solicitados para registrar una incidencia.
+		\UCpaso registra la incidencia.		
+	\end{UCtrayectoria}
+
+		
+%--------------------------------------

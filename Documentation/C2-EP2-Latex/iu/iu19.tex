@@ -1,0 +1,38 @@
+%--------------------------------------
+\newpage
+\section{IU19 Registrar medico}
+
+\subsection{Objetivo}
+	Permite a {\bf Recursos Humanos} registrar las actividades que hicieron los infantes y que calificacion se les otorgo para que los padres puedan visualizarlo
+
+\subsection{Diseño}
+	 Esta pantalla \IUref{IU19}{Registrar médico} (ver figura~\ref{IU19}) aparece cuando el            profesor selecciona el comando medicina en la \IUref{IU4}{Pantalla principal  recursos humanos}. 
+         En la parte superior aparecen cuatro opciones de que acciones puede realizar el actor las cuales son: {\bf Alimentacion}, {\bf Docencia}, {\bf Medicina}, {\bf Cerrar sesión}. 
+         El contenido muestra tres inputs solicitando Número de Sala, detalles actividad, nombre actividad y ponderacion
+         en la parte de abajo tiene un boton que guarda al médico en la bd
+ 
+%\IUfig[numero que modifica el tamaño de la imagen]{nombre de la imagen}{Id interfaz}{nombre interfaz.}
+\IUfig[.9]{regmedico}{IU19}{Registrar medico.}
+
+\subsection{Salidas}
+
+	Ninguna.
+
+\subsection{Entradas}
+Nombre, licencia medica, fecha nacimiento, salario, curp, telefono, direccion.
+
+\subsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Alimentacion}: Muestra la \IUref{IU13}{registrar nutriologo}.
+	\item \IUbutton{Docencia}: Muestra la \IUref{IU8}{registrar profesor}.
+ 	\item \IUbutton{Medicina}: Muestra la \IUref{IU19}{registrar medico}.
+        \item \IUbutton{Guardar}: Registra al médico en la BD y muestra el MSGX
+        \item \IUbutton{Cerrar sesión}: Termina la sesion del usuario y lo saca del sistema
+\end{itemize}
+
+\subsection{Mensajes}
+
+\begin{Citemize}
+	\item Exito registrando al médico.
+\end{Citemize}
+

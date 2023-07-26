@@ -1,0 +1,62 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU8}{Generar cita}{
+		El director, un nutriólogo, profesor o médico pueden generar una cita con los tutores.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Diego Rosas Cruz}
+		\UCitem{Supervisa}{\color{Gray}Ulises Vélez Saldaña.}
+		\UCitem{Actor}{\hyperlink{director}{director}, \hyperlink{medico}{Medico}, \hyperlink{nutriologo}{Nutriologo}, \hyperlink{docente}{profesor}}
+		\UCitem{Propósito}{Se necesita generar una cita cuando ocurra alguna incidencia o cuando se necesite informar a los tutores sobre algo relacionado a la guardería y sus hijos.}
+		\UCitem{Entradas}{nombre del niño, nombre del tutor, fecha y hora de la cita}
+		\UCitem{Origen}{Pantalla}
+		\UCitem{Salidas}{MSGX.}
+		\UCitem{Destino}{IUX}
+		\UCitem{Precondiciones}{El niño y su tutor deben estar registrados.
+  El actor que genere la cita debe haber iniciado sesión en el sistema.
+  }
+		\UCitem{Postcondiciones}{Se generará una nueva cita.}
+	   \UCitem{Errores}{
+            \begin{itemize}
+                \item Si el actor que intenta generar la cita ya tiene otro cita en esa fecha y hora el sistema pedirá que ingrese otra fecha y hora.
+                \item No se llenaron los datos correctamente; el sistema mostrara en que campos se tiene error y solicitara su corrección.
+            \end{itemize}
+            }
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{ninguna}
+	\end{UseCase}
+%--------------------------------------
+%--------------------------------------
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Accede al sistema.
+		\UCpaso muestra la \IUref{IUX}{Pantalla principal}.
+		\UCpaso[\UCactor] solicita generar cita
+		\UCpaso muestra la \IUref{IUX}{Generar cita}.
+		\UCpaso[\UCactor] Ingresa nombre del niño, del tutor, fecha y hora para la cita.
+		\UCpaso verifica  que en la fecha y hora indicadas el actor no tenga otra cita.\Trayref{A}.
+        \UCpaso Verifica que todos los datos estén llenados correctamente \Trayref{B}.
+		\UCpaso registra una nueva cita y muestra al actor el mensaje de éxito {\bf MSGX}:.
+	\end{UCtrayectoria}
+ %--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El actor ya tiene una cita en esa fecha y hora.}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Esa fecha y hora ya están ocupadas, por favor ingrese una fecha y hora distintas.''.
+			\UCpaso Continua en el paso 7 del caso de uso.
+		\end{UCtrayectoriaA}
+  %--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Algun dato del formulario incorrecto}
+			\UCpaso Muestra el Mensaje {\bf MSGX}``Revise los datos ingresados.''.
+                \UCpaso Subraya de rojo los campos que tienen problemas con los datos ingresados.
+			\UCpaso Continua en el paso 5 del caso de uso.
+		\end{UCtrayectoriaA}
+
+%-------------------------------------- TERMINA descripción del caso de uso.
